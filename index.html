@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caryn Walker — Author · Counsellor · Life Coach · Teacher</title>
+<meta name="description" content="Caryn Walker — Sunday Times best-selling author of 'Tell Me You're Sorry, Daddy', qualified life coach, and founder of Britannia School of Language.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<style>
+  /* ---- triptych (landing only) ---- */
+  .tri-band{ background:linear-gradient(158deg,#7b6aab,#584a7d); color:#f9f6fd; }
+  .tri-band .pp{ width:58px; height:58px; border-radius:50%; object-fit:cover; object-position:center top; filter:grayscale(1); }
+  .tri-band .nm{ font-family:var(--serif); font-size:1.5rem; line-height:1; }
+  .tri-band .sb{ font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:#d8cfe9; margin-top:.3rem; }
+  .tri-band .tag{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:#eae3f5; }
+
+  .tri{ display:flex; min-height:600px; }
+  .tri-panel{ position:relative; flex:1; overflow:hidden; cursor:pointer; display:flex; flex-direction:column;
+    justify-content:flex-end; padding:3rem 2.5rem; border-left:1px solid rgba(255,255,255,.1);
+    color:#fff; transition:flex .55s cubic-bezier(.4,0,.1,1); }
+  .tri-panel:first-child{ border-left:0; }
+  .tri:hover .tri-panel{ flex:.72; }
+  .tri .tri-panel:hover{ flex:1.9; }
+  .tri-panel .bg{ position:absolute; inset:0; z-index:0; transition:transform .8s ease; }
+  .tri-panel:hover .bg{ transform:scale(1.04); }
+  .tri-panel > *{ position:relative; z-index:1; }
+  .tri-panel .pn{ font-family:var(--serif); font-style:italic; font-size:1.1rem; opacity:.9; }
+  .tri-panel h3{ font-family:var(--serif); font-weight:400; font-size:2.7rem; line-height:1.02; margin-top:.6rem; letter-spacing:-.01em; }
+  .tri-panel p{ font-size:.95rem; line-height:1.55; max-width:30em; margin-top:1.1rem; opacity:0; max-height:0; transition:opacity .45s,max-height .45s; }
+  .tri .tri-panel:hover p{ opacity:.92; max-height:140px; }
+  .tri-panel .go{ margin-top:1.5rem; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
+    display:inline-flex; gap:.6rem; align-items:center; opacity:0; transition:opacity .4s .1s; font-weight:600; }
+  .tri .tri-panel:hover .go{ opacity:1; }
+  .p-author .bg{ background:linear-gradient(160deg,#a4738d,#6f4d67); } .p-author{ color:#fdf4f8; } .p-author .pn{ color:#f5d3df; }
+  .p-author .bg{ background-image:linear-gradient(to top, rgba(70,45,64,.92) 0%, rgba(90,60,82,.62) 45%, rgba(120,90,110,.3) 100%), url("images/author-panel-bg.jpeg"); background-size:cover; background-position:center 22%; }
+  .p-school .bg{ background:linear-gradient(160deg,#7069b8,#4a4585); } .p-school{ color:#f4f2fd; } .p-school .pn{ color:#f0d89b; }
+  .p-coach  .bg{ background:linear-gradient(160deg,#8a76b6,#5b4c88); } .p-coach{ color:#f8f4fd; } .p-coach .pn{ color:#e2d2f3; }
+  .p-counsel .bg{ background:linear-gradient(160deg,#7079b6,#4c5484); } .p-counsel{ color:#f3f4fc; } .p-counsel .pn{ color:#d3d9f0; }
+  .tri-hint{ text-align:center; font-size:.78rem; letter-spacing:.04em; color:#c9bfe0; padding:1.1rem 0; background:#584a7d; }
+
+  /* mobile: stacked, always-open blocks */
+  @media (max-width:991.98px){
+    .tri{ flex-direction:column; min-height:0; }
+    .tri-panel{ flex:none !important; border-left:0; border-top:1px solid rgba(255,255,255,.1); padding:2.2rem 1.6rem; }
+    .tri-panel:first-child{ border-top:0; }
+    .tri-panel h3{ font-size:2rem; }
+    .tri-panel p{ opacity:.9 !important; max-height:none !important; margin-top:.8rem; }
+    .tri-panel .go{ opacity:1 !important; margin-top:1.1rem; }
+    .tri-hint{ display:none; }
+    .tri-band .tag{ display:none; }
+  }
+  .cred{ display:flex; flex-wrap:wrap; gap:.6rem; }
+  .cred span{ font-size:.78rem; letter-spacing:.04em; border:1px solid var(--line); border-radius:100px; padding:.45rem .95rem; color:var(--ink-2); }
+</style>
+</head>
+<body data-world="hub">
+
+<!-- ============ NAV ============ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="brand-mark" src="images/logo-dark.png" alt="">
+      <span class="name">Caryn Walker</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="author.html">The Autobiography</a></li>
+        <li class="nav-item"><a class="nav-link" href="counselling.html">Counselling</a></li>
+        <li class="nav-item"><a class="nav-link" href="coaching.html">Life Coaching</a></li>
+        <li class="nav-item"><a class="nav-link" href="tutoring.html">Language Tutoring</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Caryn</a></li>
+        <li class="nav-item nav-cta-wrap ms-lg-3"><a class="btn btn-outline-dark btn-sm" href="#contact">Get in touch</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ TRIPTYCH HERO ============ -->
+<header>
+  <div class="tri-band">
+    <div class="container py-4">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="d-flex align-items-center gap-3">
+          <img class="pp" src="images/caryn-portrait.png" alt="Caryn Walker">
+          <div>
+            <div class="nm serif">Caryn Walker</div>
+            <div class="sb">Author · Counsellor · Life Coach · Teacher</div>
+          </div>
+        </div>
+        <div class="tag">“Telling your story will give somebody else their voice.”</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tri">
+    <a class="tri-panel p-author" href="author.html">
+      <div class="bg"></div>
+      <div class="pn">The Author</div>
+      <h3>Tell Me You're<br>Sorry, Daddy</h3>
+      <p>The Sunday Times bestseller — surviving childhood abuse, and the fight to bring a father to justice decades on.</p>
+      <span class="go">Read her story <span class="arr">→</span></span>
+    </a>
+    <a class="tri-panel p-coach" href="coaching.html">
+      <div class="bg"></div>
+      <div class="pn">The Coach</div>
+      <h3>Life Coaching<br>with Caryn</h3>
+      <p>Confidence, resilience and finding your voice — coaching drawn from a life of hard-won wisdom.</p>
+      <span class="go">Work with Caryn <span class="arr">→</span></span>
+    </a>
+    <a class="tri-panel p-counsel" href="counselling.html">
+      <div class="bg"></div>
+      <div class="pn">The Counsellor</div>
+      <h3>Counselling<br>with Caryn</h3>
+      <p>CBT and Person-Centred counselling for trauma survivors and anyone leaving or understanding a narcissistic relationship.</p>
+      <span class="go">Book a session <span class="arr">→</span></span>
+    </a>
+    <a class="tri-panel p-school" href="tutoring.html">
+      <div class="bg"></div>
+      <div class="pn">The Teacher</div>
+      <h3>Britannia School<br>of Language</h3>
+      <p>English tutoring with a TEFL-certified native tutor — one to one and in groups. Your gateway to the world.</p>
+      <span class="go">Learn English <span class="arr">→</span></span>
+    </a>
+  </div>
+  <div class="tri-hint d-none d-lg-block">Hover a panel to explore — or tap to enter</div>
+</header>
+
+<!-- ============ MEET CARYN ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 reveal">
+        <div class="framed mx-auto" style="max-width:400px;border-radius:14px;overflow:hidden;">
+          <img src="images/caryn-portrait.png" alt="Caryn Walker">
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="eyebrow text-accent">Meet Caryn</div>
+        <h2 class="serif mt-3 mb-4" style="font-size:clamp(30px,4vw,46px);font-weight:300;line-height:1.1;letter-spacing:-.015em;">
+          One woman, several chapters — bound by a single belief in the power of telling your story.
+        </h2>
+        <p class="text-secondary mb-3" style="max-width:40em;">
+          Caryn Walker is a Sunday Times best-selling author, a qualified life coach, and the founder of
+          Britannia School of Language. Her autobiography, <em class="serif">Tell Me You're Sorry, Daddy</em>,
+          tells how she brought her father to justice decades after he abused her throughout her childhood —
+          written to give a voice to her late sister, Jenny, and to everyone who needs their story heard.
+        </p>
+        <p class="text-secondary mb-4" style="max-width:40em;">
+          Today she pours that same belief into her work: helping people find confidence and resilience
+          through coaching, and opening doors to the world through language.
+        </p>
+        <div class="cred mb-4">
+          <span>Sunday Times Bestseller</span>
+          <span>Liverpool Echo Award</span>
+          <span>TEFL-certified educator</span>
+          <span>Accredited life coach</span>
+        </div>
+        <a class="btn btn-primary" href="#contact">Get in touch <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE WAYS IN (quick links) ============ -->
+<section class="section-sm" style="background:var(--paper-2);">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 reveal">
+        <a href="author.html" class="d-block h-100 text-decoration-none">
+          <div class="card h-100"><div class="card-body d-flex flex-column">
+            <div class="tag">The Author</div>
+            <h3 class="serif">Tell Me You're Sorry, Daddy</h3>
+            <p>A bestselling story of survival, justice and finding your voice.</p>
+            <span class="go">Read &amp; buy the book →</span>
+          </div></div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <a href="coaching.html" class="d-block h-100 text-decoration-none">
+          <div class="card h-100"><div class="card-body d-flex flex-column">
+            <div class="tag">The Coach</div>
+            <h3 class="serif">Life Coaching with Caryn</h3>
+            <p>Confidence, resilience and clarity — one to one, drawn from lived experience.</p>
+            <span class="go">Work with Caryn →</span>
+          </div></div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <a href="counselling.html" class="d-block h-100 text-decoration-none">
+          <div class="card h-100"><div class="card-body d-flex flex-column">
+            <div class="tag">The Counsellor</div>
+            <h3 class="serif">Counselling with Caryn</h3>
+            <p>CBT and Person-Centred support for trauma survivors and narcissistic abuse recovery.</p>
+            <span class="go">Book an appointment →</span>
+          </div></div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <a href="tutoring.html" class="d-block h-100 text-decoration-none">
+          <div class="card h-100"><div class="card-body d-flex flex-column">
+            <div class="tag">The Teacher</div>
+            <h3 class="serif">Britannia School of Language</h3>
+            <p>English tutoring with a TEFL-certified native tutor. Your gateway to the world.</p>
+            <span class="go">Explore classes →</span>
+          </div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section tst">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 reveal">
+        <div class="eyebrow">In their words</div>
+        <h2 class="serif mt-3" style="font-size:clamp(28px,3.4vw,40px);font-weight:300;line-height:1.1;letter-spacing:-.015em;">
+          Readers, students and clients on working with Caryn.
+        </h2>
+      </div>
+      <div class="col-lg-8 reveal">
+        <div id="tstCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <blockquote class="serif">“I read it in one sitting and wept. Caryn's courage gave me permission to finally speak about my own past.”</blockquote>
+              <div class="by"><span class="av serif">R</span><div><div class="nm">Reader review</div><div class="ro">on <em>Tell Me You're Sorry, Daddy</em></div></div></div>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="serif">“My English went from hesitant to genuinely confident in three months. Caryn makes you believe you can do it.”</blockquote>
+              <div class="by"><span class="av serif">M</span><div><div class="nm">Marta K.</div><div class="ro">Britannia School student</div></div></div>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="serif">“Caryn helped me find a voice I didn't know I'd lost. I walk into rooms differently now.”</blockquote>
+              <div class="by"><span class="av serif">J</span><div><div class="nm">James T.</div><div class="ro">Coaching client</div></div></div>
+            </div>
+          </div>
+          <div class="tst-ctl">
+            <div class="carousel-indicators tst-dots" role="tablist">
+              <button type="button" data-bs-target="#tstCarousel" data-bs-slide-to="0" class="active" aria-label="1"></button>
+              <button type="button" data-bs-target="#tstCarousel" data-bs-slide-to="1" aria-label="2"></button>
+              <button type="button" data-bs-target="#tstCarousel" data-bs-slide-to="2" aria-label="3"></button>
+            </div>
+            <div class="tst-arrows">
+              <button type="button" data-bs-target="#tstCarousel" data-bs-slide="prev" aria-label="Previous">←</button>
+              <button type="button" data-bs-target="#tstCarousel" data-bs-slide="next" aria-label="Next">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT CTA ============ -->
+<section class="cta-band" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <img class="cta-mark d-block" src="images/logo.png" alt="">
+      <div class="eyebrow" style="color:var(--hero-eye);">Get in touch</div>
+      <h2 class="mt-3">Whichever chapter brought you here, Caryn would love to hear from you.</h2>
+      <p>For the book, the classroom or the coaching — send a note and she'll personally reply.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+        <a class="btn btn-paper" href="mailto:caryn@carynwalker.com">Email Caryn <span class="arr">→</span></a>
+        <a class="btn btn-on-dark" href="tutoring.html">Book a class</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-foot">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5 col-6">
+        <img class="foot-mark" src="images/logo.png" alt="">
+        <div class="name serif">Caryn Walker</div>
+        <p class="blurb"><a href="author.html">Author</a>, <a href="counselling.html">counsellor</a>, <a href="coaching.html">life coach</a> and <a href="tutoring.html">teacher</a> — telling stories, building confidence, and opening doors to the world.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h4>The Work</h4>
+        <ul>
+          <li><a href="author.html">The Autobiography</a></li>
+          <li><a href="counselling.html">Counselling</a></li>
+          <li><a href="coaching.html">Life Coaching</a></li>
+          <li><a href="tutoring.html">Language Tutoring</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h4>The Book</h4>
+        <ul>
+          <li><a href="author.html#buy">Buy the book</a></li>
+          <li><a href="author.html#about-book">About the autobiography</a></li>
+          <li><a href="author.html#award">Echo Award</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:caryn@carynwalker.com">caryn@carynwalker.com</a></li>
+          <li><a href="https://www.facebook.com/CarynWalkerAuthor/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>© <span data-year>2026</span> Caryn Walker</span>
+      <span><a href="author.html">Author</a> · <a href="counselling.html">Counsellor</a> · <a href="coaching.html">Life Coach</a> · <a href="tutoring.html">Teacher</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<a class="wa-btn" href="https://wa.me/447387612409" target="_blank" rel="noopener" aria-label="Message Caryn on WhatsApp"><span class="wa-tip">Message Caryn</span><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.004 3C9.096 3 3.5 8.596 3.5 15.504c0 2.61.79 5.036 2.144 7.05L3 29l6.62-2.586a12.44 12.44 0 0 0 6.384 1.744h.005c6.907 0 12.503-5.596 12.503-12.504C28.512 8.746 22.916 3.15 16.004 3zm0 22.77h-.004a10.36 10.36 0 0 1-5.29-1.45l-.38-.226-3.93 1.535 1.05-3.828-.248-.393a10.24 10.24 0 0 1-1.58-5.463c0-5.71 4.65-10.36 10.386-10.36 2.773 0 5.38 1.082 7.34 3.046a10.31 10.31 0 0 1 3.043 7.325c0 5.71-4.65 10.36-10.386 10.36zm5.687-7.766c-.312-.156-1.846-.91-2.132-1.014-.286-.104-.494-.156-.702.156-.208.312-.806 1.014-.988 1.222-.182.208-.364.234-.676.078-.312-.156-1.317-.485-2.508-1.548-.927-.827-1.553-1.848-1.735-2.16-.182-.312-.02-.48.137-.636.14-.14.312-.364.468-.546.156-.182.208-.312.312-.52.104-.208.052-.39-.026-.546-.078-.156-.702-1.692-.962-2.318-.253-.61-.51-.527-.702-.537l-.598-.01c-.208 0-.546.078-.832.39-.286.312-1.09 1.065-1.09 2.6 0 1.534 1.116 3.017 1.272 3.225.156.208 2.196 3.354 5.32 4.702.744.321 1.324.513 1.777.657.746.237 1.425.204 1.962.124.599-.09 1.846-.755 2.106-1.485.26-.73.26-1.355.182-1.485-.078-.13-.286-.208-.598-.364z"/></svg></a>
+<script src="js/site.js"></script>
+</body>
+</html>
