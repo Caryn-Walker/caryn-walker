@@ -282,6 +282,12 @@ body.modal-open .wa-btn{ display:none; }
   .feat-grid.cols-3{ grid-template-columns:repeat(2,1fr); }
   .section{ padding:4.5rem 0; }
 }
+/* .row.g-5 lives straight inside .container; its -1.5rem side margin overflows
+   the container's .75rem padding below xl, causing horizontal scroll on mobile.
+   Cap the horizontal gutter (keep the vertical one for stacked spacing). */
+@media (max-width:1199.98px){
+  .row.g-5{ --bs-gutter-x:1.5rem; }
+}
 @media (max-width:639.98px){
   .feat-grid, .feat-grid.cols-3{ grid-template-columns:1fr; }
 }
